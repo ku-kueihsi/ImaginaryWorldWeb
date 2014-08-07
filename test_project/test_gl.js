@@ -15,7 +15,7 @@ testGl.start = function() {
   goog.dom.appendChild(goog.global.document.body, container);
   var canvas = goog.dom.createElement('canvas');
   container.appendChild(canvas);
-  goog.style.setSize(canvas, 800, 600);
+  goog.style.setSize(canvas, 640, 480);
   start(canvas);
 }
 
