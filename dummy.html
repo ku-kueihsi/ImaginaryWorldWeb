@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,user-scalable=no,width=device-width,height=device-height">
+    <style>
+    h1 { position: fixed; top: 0; left: 0; height: 32px; background-color: #CDCDCD; color: black; font-size: 32px; line-height: 32px; padding: 2px; width: 100%; margin: 0;}
+    p { margin-top: 36px; }
+    </style>
+  </head>
+  <body>
+    <h1>Header</h1>
+    <p>The expected behaviour is that the grey header fills the top of the screen and stays put no matter how much you scroll. On Samsung Android browsers it seems to scroll out of view then pop back into place once the scrolling is done, as if the fixed-positioning is being simulated using Javascript, which it isn't.
+
+Edit Judging by the comments and "answers" it seems that maybe I wasn't clear on what I need. I am looking for a meta tag or css rule/hack or javascript toggle which turns off Samsung's broken fixed-positioning and turns on the Android browser's working fixed-positioning. I am not looking for a Javascript solution that adds broken fixed-positioning to a browser that has no support whatsoever; the Samsung fixed-positioning does that already, it just looks stupid.
+
+android css webkit css-position samsung-mobile
+share|improve this question
+edited Jul 11 '12 at 11:50
+
+asked Jul 6 '12 at 18:34
+
+Mr. Shiny and New 安宇
+10.1k32350
+
+Do you have a reference for "The Android browser, since 2.2, supports fixed positioning" ? –  Deefour Jul 9 '12 at 14:47
+
+@Deefour The Android emulator in the SDK confirms it, as I mentioned in my post. –  Mr. Shiny and New 安宇 Jul 9 '12 at 15:01
+
+caniuse says < 3.0 has only partial support, and the referenced article says "Android 2.2 awkwardly snaps fixed elements back into position once scrolling is complete.". Just looking for something that confirms what you see in your SDK is the expected behavior, as it seems at least with the Galaxy 551 (the one with 2.2) you're experiencing the exact behavior the referenced article above describes. –  Deefour Jul 9 '12 at 15:49
+
+@Deefour I have tested on other Android 2.2 devices such as the Motorola Atrix 4G and it works as I expect. And the WebView component provided by Android on the very same Samsung phones also works properly; presumably it has not been modified the way the browser has. –  Mr. Shiny and New 安宇 Jul 9 '12 at 16:29
+
+I had the same exact problem when developing an app using WebView. For me, it failed to work on two HTC devices and a Motorola. So I'm convinced it's probably not Samsung-specific. Have you tried a Javascript solution such as iScroll? Probably already seen this, but another answer recommended modifying the viewport. –  MusikAnimal Jul 10 '12 at 2:21 </p>
+  </body>
+</html>
